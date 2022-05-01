@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { FaSortDown, FaRegBell } from "react-icons/fa";
+import { FaSortDown, FaRegBell } from "react-icons/fa"
 
 function NavBar() {
   return (
@@ -38,7 +38,6 @@ function NavBar() {
           </div>
         </div>
       </nav>
-
     </div>
   )
 }

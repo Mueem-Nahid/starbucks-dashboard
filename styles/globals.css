@@ -6,7 +6,7 @@
 
 @layer base {
     html {
-        font-family: "Inter";
+        font-family: "Inter", sans-serif;
         @apply text-[#3E3F48];
     }
 }

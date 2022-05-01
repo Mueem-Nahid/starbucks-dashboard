@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Dashboard from '../components/Dashboard'
 import NavBar from '../components/NavBar'
-import styles from '../styles/Home.module.css'
+import SideBar from '../components/SideBar'
 
 export default function Home() {
   return (
@@ -12,8 +13,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <header>
         <NavBar />
+      </header>
+
+      <main className='bg-[#E5E5E6]'>
+        <SideBar />
       </main>
     </div>
   )
