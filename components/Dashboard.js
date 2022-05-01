@@ -20,40 +20,40 @@ function Dashboard() {
         <div className=''>
           <table className="table-auto w-full">
             <thead className='bg-[#FDF4ED]'>
-              <tr className='h-10 text-center'>
-                <th>
+              <tr className='h-10'>
+                <th className='text-left pl-5'>
                   <input type="checkbox" />
                 </th>
-                <th className='text-sm font-medium'>
+                <th className='text-sm font-medium text-left'>
                   <span className='mr-1'>Date Updated</span>
                   <Image height={11} width={11} src='/table/down-arrow.svg' alt='down-arrow' />
                 </th>
-                <th className='text-sm font-medium'>
+                <th className='text-sm font-medium text-left'>
                   <span className='mr-1'>Title</span>
                   <Image height={11} width={11} src='/table/up-down.svg' alt='up-down' />
                 </th>
-                <th className='text-sm font-medium'>Details</th>
-                <th className='text-sm font-medium'>Status</th>
-                <th className='text-sm font-medium'>Quantity</th>
-                <th className='text-sm font-medium'>Unite Price</th>
-                <th className='text-sm font-medium'>
+                <th className='text-sm font-medium text-left'>Details</th>
+                <th className='text-sm font-medium text-left'>Status</th>
+                <th className='text-sm font-medium text-right'>Quantity</th>
+                <th className='text-sm font-medium text-right'>Unite Price</th>
+                <th className='text-sm font-medium text-right pr-5'>
                   <span className='mr-1'>Amount</span>
                   <Image height={11} width={11} src='/table/up-down.svg' alt='up-down' />
                 </th>
               </tr>
             </thead>
             <tbody>
-              <tr className='text-center h-16 text-base font-normal'>
-                <td>
+              <tr className='h-16 text-base font-normal'>
+                <td className='text-left pl-5'>
                   <input type="checkbox" />
                 </td>
-                <td >11 Nov 2021</td>
-                <td >Hammer</td>
-                <td >This is a hammer to do work with</td>
-                <td >Alright</td>
-                <td >200/300</td>
-                <td >$10</td>
-                <td >$2000.00</td>
+                <td className='text-left'>11 Nov 2021</td>
+                <td className='text-left'>Hammer</td>
+                <td className='text-left'>This is a hammer to do work with</td>
+                <td className='text-left'>Alright</td>
+                <td className='text-right'>200/300</td>
+                <td className='text-right'>$10</td>
+                <td className='text-right pr-5'>$2000.00</td>
               </tr>
             </tbody>
           </table>
