@@ -1,11 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
-import { FaArrowDown } from "react-icons/fa"
+import { tableData } from '../utilities/tableData'
 
 function Dashboard() {
   return (
     <div>
-      <div className='h-20 shadow-sm flex items-center'>
+      <div className='h-16 shadow-sm flex items-center'>
         <h1 className='font-bold text-xl ml-6'>Inventory</h1>
       </div>
       <div className='m-1 md:m-6 bg-white rounded shadow'>
@@ -43,18 +43,29 @@ function Dashboard() {
               </tr>
             </thead>
             <tbody>
-              <tr className='h-16 text-base font-normal'>
-                <td className='text-left pl-5'>
-                  <input type="checkbox" />
-                </td>
-                <td className='text-left'>11 Nov 2021</td>
-                <td className='text-left'>Hammer</td>
-                <td className='text-left'>This is a hammer to do work with</td>
-                <td className='text-left'>Alright</td>
-                <td className='text-right'>200/300</td>
-                <td className='text-right'>$10</td>
-                <td className='text-right pr-5'>$2000.00</td>
-              </tr>
+              {
+                tableData.map(({ id, date, title, details, status, quantity, price, amount }) => (
+                  <tr key={id} className='h-16 text-base font-normal hover:bg-gray-100'>
+                    <td className='text-left pl-5'>
+                      <input type="checkbox" />
+                    </td>
+                    <td className='text-left'>{date}</td>
+                    <td className='text-left'>{title}</td>
+                    <td className='text-left'>{details ? details : '-'}</td>
+                    <td className='text-left'>
+                      <span className='mr-2'>{status}</span>
+                      <Image src={`${status === 'Alright' && '/table/alright.png' || status === 'In Progress' && '/table/in-progress.png' || status === 'In Progress' && '/table/in-progress.png' || status === 'Out of Stock' && '/table/out-of-stock.png'}`} alt={status} width={8} height={8} />
+                    </td>
+                    <td className='text-right'>
+                      <span className='font-bold'>{quantity.split('/')[0]}</span>/
+                      {quantity.split('/')[1]}
+                    </td>
+                    <td className='text-right'>{price}</td>
+                    <td className='text-right pr-5'>{amount}</td>
+                  </tr>
+                ))
+              }
+
             </tbody>
           </table>
         </div>
