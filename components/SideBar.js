@@ -45,7 +45,9 @@ function SideBar() {
 
                 </div>
             </div>
-            <div className='w-full'><Dashboard/></div>
+            <div className='w-full'>
+                <Dashboard />
+            </div>
         </div>
     )
 }
