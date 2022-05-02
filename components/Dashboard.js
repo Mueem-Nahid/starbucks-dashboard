@@ -21,21 +21,21 @@ function Dashboard() {
           <table className="table-auto w-full">
             <thead className='bg-[#FDF4ED]'>
               <tr className='h-10'>
-                <th className='text-left pl-5'>
+                <th className='text-left pl-5 hidden md:table-cell'>
                   <input type="checkbox" />
                 </th>
-                <th className='text-sm font-medium text-left'>
+                <th className='text-sm font-medium text-left hidden md:table-cell'>
                   <span className='mr-1'>Date Updated</span>
                   <Image height={11} width={11} src='/table/down-arrow.svg' alt='down-arrow' />
                 </th>
-                <th className='text-sm font-medium text-left'>
+                <th className='text-sm font-medium text-left pl-5 md:pl-0'>
                   <span className='mr-1'>Title</span>
                   <Image height={11} width={11} src='/table/up-down.svg' alt='up-down' />
                 </th>
-                <th className='text-sm font-medium text-left'>Details</th>
-                <th className='text-sm font-medium text-left'>Status</th>
-                <th className='text-sm font-medium text-right'>Quantity</th>
-                <th className='text-sm font-medium text-right'>Unite Price</th>
+                <th className='text-sm font-medium text-left hidden lg:table-cell'>Details</th>
+                <th className='text-sm font-medium text-left opacity-0 md:opacity-100'>Status</th>
+                <th className='text-sm font-medium text-right opacity-0 lg:opacity-100'>Quantity</th>
+                <th className='text-sm font-medium text-right hidden lg:table-cell'>Unite Price</th>
                 <th className='text-sm font-medium text-right pr-5'>
                   <span className='mr-1'>Amount</span>
                   <Image height={11} width={11} src='/table/up-down.svg' alt='up-down' />
@@ -46,26 +46,25 @@ function Dashboard() {
               {
                 tableData.map(({ id, date, title, details, status, quantity, price, amount }) => (
                   <tr key={id} className='h-16 text-base font-normal hover:bg-gray-100'>
-                    <td className='text-left pl-5'>
+                    <td className='text-left pl-5 hidden md:table-cell'>
                       <input type="checkbox" />
                     </td>
-                    <td className='text-left'>{date}</td>
-                    <td className='text-left'>{title}</td>
-                    <td className='text-left'>{details ? details : '-'}</td>
-                    <td className='text-left'>
-                      <span className='mr-2'>{status}</span>
+                    <td className='text-left hidden md:table-cell'>{date}</td>
+                    <td className='text-left pl-5 md:pl-0'>{title}</td>
+                    <td className='text-left hidden lg:table-cell'>{details ? details : '-'}</td>
+                    <td className='text-left flex items-center h-16'>
+                      <span className='mr-2 hidden md:block'>{status}</span>
                       <Image src={`${status === 'Alright' && '/table/alright.png' || status === 'In Progress' && '/table/in-progress.png' || status === 'In Progress' && '/table/in-progress.png' || status === 'Out of Stock' && '/table/out-of-stock.png'}`} alt={status} width={8} height={8} />
                     </td>
                     <td className='text-right'>
                       <span className='font-bold'>{quantity.split('/')[0]}</span>/
                       {quantity.split('/')[1]}
                     </td>
-                    <td className='text-right'>{price}</td>
+                    <td className='text-right hidden lg:table-cell'>{price}</td>
                     <td className='text-right pr-5'>{amount}</td>
                   </tr>
                 ))
               }
-
             </tbody>
           </table>
         </div>
@@ -75,5 +74,3 @@ function Dashboard() {
 }
 
 export default Dashboard
-
-// flex items-center h-10 justify-evenly
