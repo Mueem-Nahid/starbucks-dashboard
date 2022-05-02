@@ -32,7 +32,7 @@ function SideBar() {
     }
     return (
         <div className='flex flex-col-reverse md:flex-row'>
-            <div className='w-full md:w-20 lg:w-60 md:h-screen bg-white md:bg-[#E5E5E6] text-[#6B6C72] font-medium text-sm shadow'>
+            <div className='w-full h-20 md:w-20 md:h-auto lg:w-60 bg-white md:bg-[#E5E5E6] text-[#6B6C72] font-medium text-sm shadow'>
                 <div className='m-5 flex flex-row justify-between md:flex-col items-center p-1'>
                     {
                         sideBarOptions.map((option) => (
