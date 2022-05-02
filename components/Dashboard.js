@@ -52,6 +52,34 @@ function Dashboard() {
             </tbody>
           </table>
         </div>
+        <div className='mt-6 mx-4 pb-6 flex justify-between'>
+          <div role='button' className='w-48 h-8 border border-[#B2B2B6] rounded hidden md:flex justify-between items-center p-2 shadow'>
+            <span className=' text-[#88898E] text-sm font-medium'>10 Items per page</span>
+            <div className='w-3.5 h-2 relative'>
+              <Image layout={'fill'} src='/pagination/down-arrow.png' alt='down-arrow' />
+            </div>
+          </div>
+          <div>
+            <div className='flex gap-x-2'>
+              <div role='button' className='w-40 h-8 border border-[#B2B2B6] rounded flex justify-between items-center p-2 shadow'>
+                <span className=' text-[#88898E] text-sm font-medium'>Page 1 of 5</span>
+                <div className='w-3.5 h-2 relative'>
+                  <Image layout={'fill'} src='/pagination/down-arrow.png' alt='down-arrow' />
+                </div>
+              </div>
+              <div role='button' className='w-10 h-8 border border-[#B2B2B6] rounded flex items-center justify-center shadow'>
+                <div className='w-2 h-3.5 relative'>
+                  <Image src='/pagination/left-arrow.png' alt='left-arrow' layout={'fill'} />
+                </div>
+              </div>
+              <div role='button' className='w-10 h-8 border border-[#B2B2B6] rounded flex items-center justify-center shadow'>
+                <div className='w-2 h-3.5 relative'>
+                  <Image src='/pagination/right-arrow.png' alt='left-arrow' layout={'fill'} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
