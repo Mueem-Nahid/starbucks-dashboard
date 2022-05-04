@@ -10,4 +10,5 @@ This project is based on the UI design of a dashboard. Fully responsive for mobi
  - Run `npm run dev` to start the project and open `http://localhost:3000/` in the browser.
 
 **Screenshot:**
+
 ![enter image description here](https://i.ibb.co/sbXyBWN/starbucks-dashboard-1.png)
